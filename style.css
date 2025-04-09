@@ -1,23 +1,67 @@
+@font-face {
+    font-family: 'League Spartan';
+    src: url('fonts/LeagueSpartan-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'League Spartan Bold';
+    src: url('fonts/LeagueSpartan-Bold.ttf') format('truetype');
+}
+
 body{
+    font-family: 'League Spartan';
+    font-size: large;
     margin: 0px;
     padding: 0px;
     width: 100%;
     justify-items: center;
-
+    background-image: url('background.jpg');
 }
-
+nav{
+    margin-top: .8rem;
+    margin-bottom: 1rem; 
+}
+.datos{
+    font-size: xx-large;
+    margin-bottom: .5rem;
+}
+.menu{
+    font-size: x-large;
+    padding: .6rem;
+    margin: 1.5rem;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+#primero{
+    margin-top: 9rem;
+}
 .foto{
+    border-radius: 70px;
     margin-left: 2rem;
 }
 .informacion{
+    font-family: 'League Spartan Bold';
+    font-size: x-large;
     margin-right: 2rem;
 }
-
-.inicio{
-    width: 95%;
-    background-color: gray;
+.contacto{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'League Spartan Bold';
+    font-size: x-large;
+}
+.inicio{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(47, 47, 47);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    padding-bottom: .5rem;
 }
 .acerca{
     width: 100%;
@@ -36,16 +80,21 @@ body{
     width: 100%;
     justify-items: center;
 }
-
+#tituloFE{
+    margin-bottom: 1.5rem;
+    font-family: 'League Spartan Bold';
+    font-size: xx-large;
+}
 .experiencia{
     width: 100%;
     justify-items: center;
 }
 .atexto{
-    width: 30%;
+    width: 40%;
     background-color: black;
     color: white;
     padding: 1rem;
+    line-height: 1.5;
 }
 .divisor{
     width: 98%;
@@ -55,4 +104,61 @@ body{
     border-left: 0px;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+    font-size: xx-large;
+    font-family: 'League Spartan Bold';
+}
+.slider{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.slides{
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.slide{
+    min-width: 100%;
+    display: none;
+}
+.slide.active{
+    display: block;
+}
+button.prev, button.next {
+    margin-top: 1rem;
+    transform: translateY(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: large;
+}
+button.prev:hover, button.next:hover{
+
+}
+.prev{
+    left: 10px;
+    background-color: red;
+}
+.next{
+    right: 10px;
+    background-color: green;
+}
+.portafolio{
+    display: block;
+    justify-items: center;
+}
+
+#puesto{
+    font-family: 'League Spartan Bold';
+}
+li{
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.estudios{
+    font-family: 'League Spartan Bold';
+    text-align: center;
 }

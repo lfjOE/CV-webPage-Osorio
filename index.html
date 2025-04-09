@@ -8,12 +8,30 @@
 </head>
 <body>
     <div class="inicio">
-        <img class="foto" src="" alt="Me">
+        <img class="foto" src="src/yo.jpeg" alt="Me" height="130px">
         
-        <div class="informacion">
-            <nav>Menu</nav>
-            <div class="datos">Luis Felipe de Jesús Osorio Estrada</div>
-            <div class="contacto">Contacto</div>
+        <div class>
+            <nav>
+                <a href="" class="menu">Inicio</a>
+                <a href="" class="menu">Acerca de mi</a>
+                <a href="" class="menu">Formación</a>
+                <a href="" class="menu">Portafolio</a>
+            </nav>
+            
+        </div>
+    </div>
+    <div class="divisor" id="primero">Informacion personal</div>
+    <div class="informacion">
+        <div class="datos">
+            Luis Felipe de Jesús Osorio Estrada
+        </div>
+        <div>
+            Zapopan, Jalisco, México
+        </div>
+        <div class="contacto">
+            <a href="https://wa.me/523328007385"><img src="src/whatsapp.svg" alt="WhatsApp" class="icono"></a>
+            <a href="www.linkedin.com/in/luis-felipe-de-jesús-osorio-estrada-39b074246"><img src="src/linkedin.svg" alt="WhatsApp" class="icono"></a>
+            <a href="mailto:luisfelipeosorioe@gmail.com"><img src="src/gmail.svg" alt=""></a>
         </div>
     </div>
 
@@ -33,20 +51,21 @@
 
     <div class="fe">
         <div class="formacion">
-            <div>
+            <div id="tituloFE">
                 Estudios
             </div>
-            <div>
-                CETI Plantel Colomos 2022 - actualidad. Tecnólogo en Desarrollo de Software
+            <div class="estudios">
+                CETI Plantel Colomos 2022 - actualidad. <br><br>Tecnólogo en Desarrollo de Software
             </div>
         </div>
     
         <div class="experiencia">
-            <div>
+            <div id="tituloFE">
                 Experiencia laboral
             </div>
             <div>
-                What The Code_ Abril 2024 - Octubre 2024 System Analyst Junior
+                <span id="puesto">What The Code_ Abril 2024 - Octubre 2024 System Analyst Junior</span>
+                
                 <div>
                     <li>
                         Análisis de requerimientos
@@ -72,10 +91,35 @@
     </div>
     
     <div class="portafolio">
-        <div class="carrusel">
-            Hola yo soy el carrusel
+        <div class="slider">
+            <div class="slides">
+                <img src="background.jpg" class="slide active"alt="" height="100px">
+                <img src="image.jpg" class="slide"alt="" height="100px">
+                <img src="images.jpeg" class="slide"alt="" height="100px">
+            </div>
         </div>
+        <button class="prev" onclick="cambiarSlide(-1)">Anterior</button>
+        <button class="next" onclick="cambiarSlide(1)">Anterior</button>
     </div>
+    <script>
+        let index = 0;
+
+        mostrarSlide(index);
+        function cambiarSlide(n){
+            mostrarSlide(index+=n);
+        }
+
+        function mostrarSlide(n){
+            let slides = document.getElementsByClassName("slide");
+            if (n>=slides.length) index = 0;
+            if (n<0) index = slides.length-1;
+
+            for (let i = 0; i<slides.length; i++){
+                slides[i].classList.remove("active")
+            }
+            slides[index].classList.add("active");
+        }
+    </script>
 
 </body>
 </html>
