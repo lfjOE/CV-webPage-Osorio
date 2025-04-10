@@ -16,6 +16,10 @@ body{
     width: 100%;
     justify-items: center;
     background-image: url('background.jpg');
+
+    background-attachment: fixed;
+    background-size: cover; 
+    background-position: center; 
 }
 nav{
     margin-top: .8rem;
@@ -127,6 +131,7 @@ nav{
     display: block;
 }
 button.prev, button.next {
+    background-color: #007bff;
     margin-top: 1rem;
     transform: translateY(0,0,0,0.5);
     color: white;
@@ -134,17 +139,20 @@ button.prev, button.next {
     padding: 0.5rem;
     font-weight: bold;
     font-size: large;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    border-radius: 20px;
 }
-button.prev:hover, button.next:hover{
-
+button.prev:hover, button.next:hover {
+    background-color: #0056b3;
+    color: #ffffff; 
+    transition: background-color 0.3s ease; 
 }
 .prev{
     left: 10px;
-    background-color: red;
 }
 .next{
     right: 10px;
-    background-color: green;
 }
 .portafolio{
     display: block;
